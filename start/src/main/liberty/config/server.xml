@@ -6,23 +6,15 @@
     <feature>cdi-2.0</feature>
     <feature>mpConfig-1.4</feature>
     <feature>mpRestClient-1.4</feature>
-    <!-- tag::mpFaultTolerance[] -->
     <feature>mpFaultTolerance-2.1</feature>
-    <!-- end::mpFaultTolerance[] -->
-    <!-- tag::mpMetrics[] -->
     <feature>mpMetrics-2.3</feature>
-    <!-- end::mpMetrics[] -->
   </featureManager>
 
   <variable name="default.http.port" defaultValue="9080"/>
   <variable name="default.https.port" defaultValue="9443"/>
 
-  <!-- tag::quickStartSecurity[] -->
   <quickStartSecurity userName="admin" userPassword="adminpwd"/>
-  <!-- end::quickStartSecurity[] -->
-  <!-- tag::keyStore[] -->
   <keyStore id="defaultKeyStore" location="key.jks" type="jks" password="mpKeystore"/>
-  <!-- end::keyStore[] -->
 
   <httpEndpoint host="*" httpPort="${default.http.port}"
     httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
